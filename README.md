@@ -1,6 +1,6 @@
 # maarten-pennings.github.io
 
-## Webpages for github projects of [Maarten Pennings](https://github.com/maarten-pennings)
+Webpages for [github](https://github.com/maarten-pennings) projects
 
 Support pages for [ENS210](ENS210).
 
