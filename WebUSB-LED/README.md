@@ -1,6 +1,6 @@
 # [maarten-pennings.github.io](https://maarten-pennings.github.io)
 
-## Files for [ENS210](https://github.com/maarten-pennings/ENS210)
+## Files for [WebUSB-LED](https://github.com/maarten-pennings/WebUSB-LED)
 
 [index.html](index.html)
 
