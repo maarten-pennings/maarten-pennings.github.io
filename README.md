@@ -1,5 +1,5 @@
 # maarten-pennings.github.io
-This github project contains _web pages_ for the various projects at [github](https://github.com/maarten-pennings).
+This github project contains _web pages_ for the various projects at [github](https://github.com/maarten-pennings).  
 The pages are published at [https://maarten-pennings.github.io](https://maarten-pennings.github.io).
 
 
