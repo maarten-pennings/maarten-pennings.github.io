@@ -1,9 +1,10 @@
-# maarten-pennings.github.io
-This github project contains _web pages_ for the various projects of Maarten Pennings at [github](https://github.com/maarten-pennings).  
-The pages are published at [https://maarten-pennings.github.io](https://maarten-pennings.github.io).
+# Github.io
+This [github](https://github.com/maarten-pennings/maarten-pennings.github.io) project contains _web pages_ 
+for the various projects of [Maarten Pennings](https://github.com/maarten-pennings).  
+The web pages are published at [https://maarten-pennings.github.io](https://maarten-pennings.github.io).
 
 
-# web pages
+# Web pages
  * [ThingSpeak](ThingSpeak)  
    The github projects [ENS210](https://github.com/maarten-pennings/ENS210) 
    and [iAQCore](https://github.com/maarten-pennings/iAQcore) 
