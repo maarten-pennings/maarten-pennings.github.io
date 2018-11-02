@@ -34,9 +34,10 @@
       // All parameters are strings.
       // Color hint: red="d62020" (ThingSpeak default), blue="4189f4", yellow="f4d442", green="249600", amsgrey="46555f"
       addIFrame("249563","2","f4d442","1200"); // ENS210.H [may be changed]
+      addIFrame("616372","4","4189f4", "600"); // CCS811.R [may be changed]
       addIFrame("320672","1","249600","1200"); // ENS220.P [may be changed]
       addIFrame("249563","1","f4d442","1200"); // ENS210.T [may be changed]
-   // addIFrame("320672","2","249600","1200"); // ENS220.T [may be changed]
+      addIFrame("616372","2","4189f4", "600"); // CCS811.eTVOC [may be changed]
       addIFrame("381884","1","46555f", "600"); // iAQcore.CO2 [may be changed]
       // Set page title (although page is supposed to be shown 'full screen'/F11)
       document.title = "ENS sensors @ HTC"     // [may be changed]
@@ -50,7 +51,7 @@
       var xy = 24;
       var iframes = document.getElementsByTagName("IFRAME");
       var count= iframes.length
-      var cols= count<4 ? 1: 2; // cols,rows = iframe grid size [may be changed]
+      var cols= 3; //count<4 ? 1: 2; // cols,rows = iframe grid size [may be changed]
       var rows= Math.ceil(count/cols);
       var ix = Math.trunc((wx-xx)/cols); // ix,iy = iframe size in x and y direction (width,height)
       var iy = Math.trunc((wy-xy)/rows);
