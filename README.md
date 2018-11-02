@@ -6,8 +6,9 @@ The web pages are published at [https://maarten-pennings.github.io](https://maar
 
 # Web pages
  * [ThingSpeak](ThingSpeak)  
-   The github projects [ENS210](https://github.com/maarten-pennings/ENS210) 
-   and [iAQCore](https://github.com/maarten-pennings/iAQcore) 
+   The github projects [ENS210](https://github.com/maarten-pennings/ENS210), 
+   [iAQCore](https://github.com/maarten-pennings/iAQcore), and 
+   [CCS811](https://github.com/maarten-pennings/CCS811) 
    have examples that push data to ThingSpeak.
    This web page displays a multi channel dashboard.
 
