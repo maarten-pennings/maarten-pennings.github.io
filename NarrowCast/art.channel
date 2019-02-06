@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<channel>
-  <title>Art examples</title>
-  
-  <item>
-    <img>https://upload.wikimedia.org/wikipedia/commons/1/19/Venus_of_Willendorf_frontview_retouched_2.jpg</img>
-    <title>Venus of Willendorf</title>
-    <description></description>
-  </item>
-  <item>
-    <img>https://upload.wikimedia.org/wikipedia/commons/d/d4/Michelangelo%2C_Creation_of_Adam_03.jpg</img> 
-    <title>Michelangelo</title>
-    <description>Detail from fresco in the Sistine Chapel</description>
-  </item>
-  <item>
-    <img>https://upload.wikimedia.org/wikipedia/commons/a/a4/Piet_Mondriaan%2C_1930_-_Mondrian_Composition_II_in_Red%2C_Blue%2C_and_Yellow.jpg</img>
-    <title>Mondriaan</title>
-    <description>Composition II in Red, Blue, and Yellow</description>
-  </item>
+<rss>
+  <channel>
+    <title>Art examples</title>
+    
+    <item>
+      <enclosure url="https://upload.wikimedia.org/wikipedia/commons/1/19/Venus_of_Willendorf_frontview_retouched_2.jpg"/>
+      <title>Venus of Willendorf</title>
+      <description></description>
+    </item>
+    
+    <item>
+      <enclosure url="https://upload.wikimedia.org/wikipedia/commons/d/d4/Michelangelo%2C_Creation_of_Adam_03.jpg"/> 
+      <title>Michelangelo</title>
+      <description>Detail from fresco in the Sistine Chapel</description>
+    </item>
+    
+    <item>
+      <enclosure url="https://upload.wikimedia.org/wikipedia/commons/a/a4/Piet_Mondriaan%2C_1930_-_Mondrian_Composition_II_in_Red%2C_Blue%2C_and_Yellow.jpg"/>
+      <title>Mondriaan</title>
+      <description>Composition II in Red, Blue, and Yellow</description>
+    </item>
 
-</channel>
+  </channel>
+</rss>
