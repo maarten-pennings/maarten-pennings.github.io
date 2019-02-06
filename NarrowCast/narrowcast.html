@@ -88,7 +88,7 @@
         text-align: center;
         width: 5vw; /* all #fmt_bar children must add to (max) 100vw */
       }
-      #fld_source {
+      #fld_channel {
         text-align: left;
         padding-left: 6px;
         width: 15vw; /* all #fmt_bar children must add to (max) 100vw */
@@ -151,10 +151,12 @@
       var xml_stilltoload; 
       var xml_callback;
       var xml_pages;
+      var xml_log;
       function xml_adderror(url,msg) {
-        var opage= { source:url, img:div_error_png, title:'Error', description:msg };
+        var opage= { channel:url, img:div_error_png, title:'Error', description:msg };
         xml_pages.push(opage)
         console.warn('Error loading '+url+' '+msg);
+        xml_log+= 'Error loading '+url+' '+msg+'\r';
       }
       function xml_addfromfile(url,sxml) {
         var oparser= new DOMParser();
@@ -163,8 +165,8 @@
         if( orss==null ) { xml_adderror(url,'root "rss" missing'); return; }
         var ochannel= orss.querySelector('channel');
         if( ochannel==null ) { xml_adderror(url,'tag "channel" missing'); return; }
-        var osource=ochannel.querySelector('title');
-        if( osource==null ) { xml_adderror(url,'tag "channel" has no "title"'); return; }
+        var ochanneltitle=ochannel.querySelector('title');
+        if( ochanneltitle==null ) { xml_adderror(url,'tag "channel" has no "title"'); return; }
         var oitems= odom.querySelectorAll('item');
         if( oitems==null || oitems.length==0) { xml_adderror(url,'tag "channel" has no "item"'); return; }
         for( var i=0; i<oitems.length; i++ ) {
@@ -180,10 +182,11 @@
           if( otitle==null ) { xml_adderror(url,'"item" '+(i+1)+' has no "title"'); continue; }
           var odescription= oitems[i].querySelector('description');
           if( odescription==null ) { xml_adderror(url,'"item" '+(i+1)+' has no "description"'); continue; }
-          var opage= { source:osource.textContent, img:simg, title:otitle.textContent, description:odescription.textContent };
+          var opage= { channel:ochanneltitle.textContent, img:simg, title:otitle.textContent, description:odescription.textContent };
           xml_pages.push(opage)
         }
         console.log('Loaded '+oitems.length+' pages from '+url);
+        xml_log+= 'Loaded '+oitems.length+' pages from '+url+'\r';
       }
       function xml_handler() {
         // console.log('xml_handler '+this.readyState+' '+this.status+' '+this.tag);
@@ -192,7 +195,7 @@
           if( this.status==200 ) xml_addfromfile(this.tag,this.responseText); else xml_adderror(this.tag,'Failed loading');
           if( --xml_stilltoload == 0 ) { // All urls loaded, callback
             xml_pages= array_shuffle(xml_pages);
-            xml_callback(xml_pages);
+            xml_callback(xml_pages,xml_log);
           }
         }
       }
@@ -209,6 +212,7 @@
         xml_stilltoload= urls.length; // When 0, callback will be called
         xml_callback= callback; // Function to call when all urls loaded
         xml_pages= []; // List of all pages of all xml files
+        xml_log= ""; // Log of xml load
         for( var ix in urls ) {
           xml_request(urls[ix]);
         }
@@ -248,7 +252,7 @@
         document.getElementById('fld_img').src= page.img;
         document.getElementById('fld_description').innerHTML= page.description;
         document.getElementById('fld_description').style.display= page.description==""? "none" : "inline-block";
-        document.getElementById('fld_source').innerHTML= page.source;
+        document.getElementById('fld_channel').innerHTML= page.channel;
         document.getElementById('fld_pagecursor').innerHTML= (main_pages.cursor+1)+'/'+(main_pages.length);
         // Trigger animation
         main_animate( document.getElementById('fld_title') );
@@ -261,9 +265,10 @@
         if( main_pagetimer!=null ) clearInterval(main_pagetimer); // If there is a page timer running, stop it
         main_showpage(); main_pagetimer=setInterval(main_showpage, div_timeinterval_pageshow*1000); 
       }
-      function main_loadhandler(pages) { // Handler is called when xmlload finishes
+      function main_loadhandler(pages,log) { // Handler is called when xmlload finishes
         //for( var page of pages ) console.log(page); 
         console.log('New playlist '+pages.length+' pages');
+        document.getElementById('fld_channel').title= log;
         main_pages= pages;
         main_pages.cursor= -1; // Cursor added (which page to show)
         main_startpage();
@@ -274,6 +279,8 @@
       }
       function main() {
         document.getElementById('fmt_pageshow').onclick= main_startpage;
+        document.getElementById('fmt_pageshow').title= "click to move to next page";
+        document.getElementById('fld_datetime').title= "NarrowCast v4";
         document.getElementById('fld_img').src= div_wait_png; // Wait-image during first page list load (during next page list loads, previous page list is played)
         main_showtime(); setInterval(main_showtime, 50 ); // Timer to update the bottom bar (page, date/time)
         main_xmlload(); setInterval(main_xmlload, div_timeinterval_xmlload*1000 ); // Timer to reload xml page list
@@ -292,7 +299,7 @@
     </div>
     <div id="fmt_bar">
       <div id='fld_pagecursor'>wait</div>
-      <div id='fld_source'>wait</div>
+      <div id='fld_channel'>wait</div>
       <div id='fmt_pageshow'><div id='fmt_pageshow_bg'><div id='fld_pageshow'>&nbsp;</div></div></div>
       <div id='fld_xmlload'>wait</div>
       <div id='fld_datetime'>wait</div>
