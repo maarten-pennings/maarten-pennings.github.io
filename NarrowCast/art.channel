@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<channel>
+  <title>Art examples</title>
+  
+  <item>
+    <img>https://en.wikipedia.org/wiki/Art#/media/File:Venus_of_Willendorf_frontview_retouched_2.jpg</img>
+    <title>Venus of Willendorf</title>
+    <description></description>
+  </item>
+  <item>
+    <img>https://en.wikipedia.org/wiki/Art#/media/File:Michelangelo,_Creation_of_Adam_03.jpg</img> 
+    <title>Michelangelo</title>
+    <description>Detail from fresco in the Sistine Chapel</description>
+  </item>
+  <item>
+    <img>https://en.wikipedia.org/wiki/Art#/media/File:Piet_Mondriaan,_1930_-_Mondrian_Composition_II_in_Red,_Blue,_and_Yellow.jpg</img>
+    <title>Mondriaan</title>
+    <description>Composition II in Red, Blue, and Yellow</description>
+  </item>
+
+</channel>
