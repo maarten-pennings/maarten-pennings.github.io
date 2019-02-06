@@ -22,4 +22,9 @@ The web pages are published at [https://maarten-pennings.github.io](https://maar
    has a generic WebUSB console that can be used to give WebUSB-I2C commands.
    The second link has a dedicated web page to graph the ENS210 connected to a WebUSB-I2C dongle.
 
+ * [NarrowCast](NarrowCast/narrowcast.html)  
+   The github project [NarrowCast](https://github.com/maarten-pennings/NarrowCast) 
+   that was meant for this is empty. All actual sources (which are indeed files for a webserver)
+   are here.
+
 (end)
