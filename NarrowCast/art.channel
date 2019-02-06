@@ -21,5 +21,11 @@
       <description>Composition II in Red, Blue, and Yellow</description>
     </item>
 
+    <item>
+      <enclosure url="logo.png"/>
+      <title></title>
+      <description>Local image</description>
+    </item>
+
   </channel>
 </rss>
