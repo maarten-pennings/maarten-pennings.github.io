@@ -4,9 +4,9 @@
     <title>Art examples</title>
     
     <item>
-      <enclosure url="https://upload.wikimedia.org/wikipedia/commons/1/19/Venus_of_Willendorf_frontview_retouched_2.jpg"/>
-      <title>Venus of Willendorf</title>
-      <description></description>
+      <enclosure url="https://upload.wikimedia.org/wikipedia/commons/5/5f/MonaLisa_sfumato.jpeg"/>
+      <title>Leonardo da Vinci</title>
+      <description>Detail of Mona Lisa</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
     <item>
       <enclosure url="logo.png"/>
       <title></title>
-      <description>Local image</description>
+      <description>Test with a local image</description>
     </item>
 
   </channel>
