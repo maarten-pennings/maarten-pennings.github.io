@@ -241,7 +241,7 @@
         var olist= odom.querySelector('list');
         if( olist==null ) { xml_adderror(churl,'root "list" missing'); return; }
         var ochannels= odom.querySelectorAll('channel');
-        if( ochannels==null || oochannels.length==0) { list_adderror(lsturl,'tag "list" has no "channel"'); return; }
+        if( ochannels==null || ochannels.length==0) { list_adderror(lsturl,'tag "list" has no "channel"'); return; }
         for( var i=0; i<ochannels.length; i++ ) {
           var schurl= ochannels[i].textContent;
           if( schurl=="" ) { xml_adderror(churl,'"channel" '+(i+1)+' has an empty "url"'); continue; }
@@ -249,7 +249,7 @@
             simgurl= url_path(lsturl)+schurl;
           }
           var ochannel= { url:schurl };
-          list_channels_pages.push(ochannel);
+          list_channels.push(ochannel);
         }
       }
       function list_handler() {
@@ -376,6 +376,7 @@ main_listload(server+'example.list');
 <!--
 TODO
  - add .list file, which enumerates .channel
+ - add bg picture
  
  - nu.nl
  - traffic information (document.evaluate('//*[@id="lu_map"]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.src)
