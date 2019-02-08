@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<list>
+
+  <!-- 
+    A <channel> can list an absolute URL or a relative one. 
+    A relative URL, is relative to the URL of this list.
+  -->
+  
+  <channel>
+    art.channel
+  </channel>
+
+  <channel>
+    weather.channel
+  </channel>
+  
+</list>
