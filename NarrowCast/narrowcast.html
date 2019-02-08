@@ -164,7 +164,7 @@
         var opage= { channel:url_file(churl), img:div_error_png, title:'Error', description:msg+'<br/>'+churl };
         xml_pages.push(opage)
         console.warn('Error loading '+churl+' '+msg);
-        xml_log+= 'Error loading '+churl+' '+msg+'\r';
+        xml_log+= 'Error loading '+churl+' '+msg+'\r\n';
       }
       function xml_addfromfile(churl,sxml) { // Parse string `sxml` (a loaded xml channel file), and add all entries to the global array xml_pages. `churl` is the url of the channel file, used for user messages.
         var oparser= new DOMParser();
@@ -183,9 +183,7 @@
           var simgurl= oenclosure.getAttribute('url')
           if( simgurl==null ) { xml_adderror(churl,'"item" '+(i+1)+' has an "enclosure" but no "url" (for image)'); continue; }
           if( simgurl=="" ) { xml_adderror(churl,'"item" '+(i+1)+' has an "enclosure" with an empty "url" (for image)'); continue; }
-          if( simgurl.indexOf(':')==-1 ) { // Image url has no ':', so is not absolute, prepend url of channel
-            simgurl= url_path(churl)+simgurl;
-          }
+          if( simgurl.indexOf(':')==-1 ) simgurl= url_path(churl)+simgurl; // Image url is not absolute, prepend url of channel
           var otitle= oitems[i].querySelector('title');
           if( otitle==null ) { xml_adderror(churl,'"item" '+(i+1)+' has no "title"'); continue; }
           var odescription= oitems[i].querySelector('description');
@@ -194,7 +192,7 @@
           xml_pages.push(opage);
         }
         console.log('Loaded '+oitems.length+' pages from '+churl);
-        xml_log+= 'Loaded '+oitems.length+' pages from '+churl+'\r';
+        xml_log+= 'Loaded '+oitems.length+' pages from '+churl+'\r\n';
       }
       function xml_handler() {
         // console.log('xml_handler '+this.readyState+' '+this.status+' '+this.url);
@@ -233,7 +231,7 @@
       var list_log;
       function list_adderror(lsturl,msg) {
         console.warn('Error loading '+lsturl+' '+msg);
-        xml_log+= 'Error loading '+lsturl+' '+msg+'\r';
+        xml_log+= 'Error loading '+lsturl+' '+msg+'\r\n';
       }
       function list_parse(lsturl,sxml) {
         var oparser= new DOMParser();
@@ -245,12 +243,12 @@
         for( var i=0; i<ochannels.length; i++ ) {
           var schurl= ochannels[i].textContent;
           if( schurl=="" ) { xml_adderror(churl,'"channel" '+(i+1)+' has an empty "url"'); continue; }
-          if( schurl.indexOf(':')==-1 ) { // Channel url has no ':', so is not absolute, prepend url of play list
-            simgurl= url_path(lsturl)+schurl;
-          }
+          if( schurl.indexOf(':')==-1 ) simgurl= url_path(lsturl)+schurl; // Channel url is not absolute, prepend url of play list
           var ochannel= { url:schurl };
           list_channels.push(ochannel);
         }
+        console.log('Loaded '+ochannels.length+' channel urls from list '+lsturl);
+        list_log+= 'Loaded '+ochannels.length+' channel urls from list '+lsturl+'\r\n';
       }
       function list_handler() {
         // console.log('list_handler '+this.readyState+' '+this.status+' '+this.url);
@@ -264,7 +262,7 @@
         // console.log('list_request '+lsturl);
         list_callback= callback; // Function to call when loading and parsing of playlist file is completed
         list_channels= []; // List of all channel urls
-        list_log= ""; // Log of xml playlist load (parsing of playlist)
+        list_log= ''; // Log of xml playlist load (parsing of playlist)
         var oreq= new XMLHttpRequest();
         oreq.url= lsturl; // Field `url` added
         oreq.onreadystatechange= list_handler;
@@ -335,10 +333,8 @@ function main_listhandler(channels,log) {
   for( var channel of channels ) console.log(channel); 
   console.log(log);
 }
-function main_listload( lsturl) {
-  if( lsturl.indexOf(':')==-1 ) { // Playlist url has no ':', so is not absolute, prepend url of html
-    lsturl= url_path(document.URL)+lsturl;
-  }
+function main_listload(lsturl) {
+  if( lsturl.indexOf(':')==-1 ) lsturl= url_path(document.URL)+lsturl; // Playlist url is not absolute, prepend url of html
   list_loader(lsturl,main_listhandler);
 }
       function main() {
