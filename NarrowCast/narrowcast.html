@@ -123,17 +123,13 @@
 
     <script> 
       // Some diversity constants
-      var div_version= 'NarrowCast v5'; 
+      var div_version= 'NarrowCast v6\r\nMaarten Pennings'; 
       var div_error_png= 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAgCSURBVFhHjZdJbJxVEsc/2+0l3mInR+CAhDQZJC5o5oQ4wlw4gMQNiRsSSZyE5YCE0MwhSDMXDgg0jASjMCFggpzESxzStuN4C17aW7fteGvasbEdYuMl3u0krvn9X/czHYJH80l/v/req1f/qnr16msH29vbtr6+bisrKyZ5bW3NVldX92RBsua8LF3tuW9mq7xvbGzY1taW3b171zY3Nx0ka26/ee2RnUCGZUyLkrUg/C9568ED24F8vK7OppuabAt54949Z8M7LVl2ve30eY1+PvAvMi55P1Ivb+zu2i+zs9YaBDYBboEWMBuPO6dky9vxDkhOJ03nfOgIdnZ23KKXRSxIdmkndSugHcIVsChkBLbK2AnmFxZsi0woxcvLy3tH4GWRSxanyHUcgf7oRZNalNJ+Bh4QYduRI458LivLxg8etLGSEpvJybZ15lqfeMLuobNfAF4Wp4IWZyBCvWjRp0fw84LkDc490dLq0r4M4hBPlpbaJKOcWMzMtGnNh8O2jRPeniBZQQp+3nMGmtSLSH9PFiQrsrZDh2wNkpncPJsQeQoJMpHIz7cd1toLC9zt8DaE/WxL3jsCpdjL8lCyRs2v3b9v8Zpqm4VgNSPDRoqLbCKVgVuMEzgwXFhki1mZtoBO7MwZd1wiEJRqRetlV0844I5Af/QiQn9uD50hm/TcIMXbGJ/MybXRwkJLFBRYIi/PfhQOHLBR3odzc20XnQjQri1sp9eQAnqkCEUiB/Y7K12t/n9+5ip+lYrvh2wEorHHH7fx55+38eees7Gnn7aR7GzrZ36B4tQxDX78sesPilp2fDbkSDrnI31AsiB5AwUZ6cLgAzAeyrYYJDeRJ994g5Xks1BdbYPMDXAb+nDEkHuAa1DYkG1vN51HciCP9KK0KzValIeSZSD293+4K7bGEXSS/sG8A44s/sorjlzP7c/+ZQNygOKMoHOHLMjhyHvvuYL09SRCyeKULM59+8BdFuWAIlFEg0TfKwc4gqFMesCLf3HkemY/+iiZAdZ0DB0uCxlubpn1e1zh/6sPiNhnQFXcUXbC7mNklehvZOdaFOODXLebEIxy/v6ZOf2hDaE3RCFGKcoOdKfJgjuKN9+0TXR8BuRIOmcgwUMKbsSRFTYpAmckFLLunDyLEuEgN2CUcfxPf3bkembef99GcHKoqMjpKFOtZExZGGH/klJOtOlcHoE8kuDSnjoOnVvna6858iXS3aT0c76x/AK7WVxscYjizzyTZOeZeftti5OdYfrBQEGh9VEnbdk5lkhloePll113VHaV9nTOR/qAPjjz1MK4os/ItB+yQtZOynswOlBUbCM0noTw1FNJdp5Z0qxOOFJaYoPo9OXlWycONJA52VD7np+fty0a2iN9IN0byYr+hxdecJ7PEb2MqKi6MRqj242WHrKJw4ct8dhjSXaemddft1tkZezQYRssPmg9ZKozJ4fMhWwolYVOakY9RTw6+70MSPDQj4o709M2lYq+AQeaMdJOUUXIQLSQDECSwIE4bdg/06++agkiH2UthgPdZKODDLSxtwYbu9SH2vhPw8O2SRbSOR/qA3ran33WeTzFpsvOgSxuQI514UAfBThUUmpxHBhmzj+TL73k6uIm2elnjFCI2tOcHbKr2IikstD+hyPuaqdz7vUBfe3ikYj9nIq+EgfC4BqbWzDUTpF1k9ooRThMpMM4NPfJJ3aHljt+5I82crDEYhRhD1exg4Jt4dgacb4eGxVgLTPDbmN7Go411RoOuD7gvVGVdj35pPNUV6oiI8vCkNdThNdJZStXqx3SHqo8CtkgzqhJCQM4HGOulxrpPJBvbTh7HQe0tw5Uk4VGbKo7tpE9PeupnuBqQGn5sbHRllAwlM+hXMlYyxjOTBpqxGArkbVD0EV6e4naP2NHj7nvRQdn34bOddbrQznsDdkV7NRkhKwcJ3/Cnupr9NIlxynuYIWKdPee9Cn6HjZ8zTf/Eso1ZOEKWQhn4QS9oBGjzWSiGb3bFRccuZ4divcacy2QN6bI63Bce2WjCgcu8FuhCif0e6GZG+JvRCDygfJy22BB0X/OhvMoXkSuRJaBWgxdJZp6HGnAeD26o3/9myPXsxSLWZi5az5yMlYLkuRZdhHyC9j7CrtRoK9p/OxZW+MbEahP9+lKMdlK1F+y4VsKRjVwMXUUVaAGBy5j9HucCJONGvSHPvjA4p9+6tIcRv975q+gJ13t0V6RVzAqqG+wex49NbkGsqwnWKI9xpkwFs+gdA7lcuRvUajgXZ7rOC4xVuFAVYqgFlSzT6gNuLI4liQOOWLt0V4FIluy+Q1z/8amjrmJfUtzcxb8MjVlCV62WfiOhS8Y/8Mmpesc+NoBh9h8HnwHFNEFjuViGvSueV056SjicvZp/1e8n2X8Esi+d2CWowv0261D3oA5FJtYbGB0QNkBuZ75JLz861gHwshXdQyMV3jXDboMqgXm/ZHcAN1krBa+XR2BinCcn1T6b0dXRL/thUmgf7uUHR3RGBgFw0Dffn2qYyAK+kEvUE/oBvpRKuhq/hYKVuRTlZW2zr957jehmtDC4qINnD5tvXxae06dsug771j3iTLrLiuz/rfessixY9Z9/Jj1sxY5etR6jh93chdfwt4y5JMnk/KJE9aHLJ2+UyeT+qxH333XoY/CXeFfOHGqA+/9KNX/dLoRup+CZLVnwcvp815WBmVMjeX3ZEGy5iRrrz754tzc3LT/AuKPYZQMg98hAAAAAElFTkSuQmCC'
       var div_wait_png= 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAARwSURBVFhHzZfLSl1LEIZb3QdMEE8Qn8AnEAQHXkDBG97QkYo+gEPfQx/ABxBx5m3mQFQ0QcUr4mWiU2ME48BEvO30/+/9d2p1ljvhJHDyQdlV1VXVtXr3avcuynrcX0Ax/jw/P1NeXl6CDhobG11RUdEfEdQCdg2I9oE7Yh0ik8m4jY0Nd3Nz48rLy+lDwSRZn2f9se093nF7e+sqKipcfX29e3p6ys/kQGxJSQkD0Uj28fExiA/mCObn59HhbwlqALuG1oEA7gi2CwLQoXdRx67Mzc25/v5+t7297a6vr8Mc0JPLF+9EZWWlq62tdbOzs66vry/shs1L7Ih2QB2qY+CL8Kn+K8j1D0Pd7oTVAQ+r8DbFYm2cJZ8YRklsyydsDbvjQLuTaMRurdUFt9CTVjjOVSyw8a81xUZURE4boLNzeXnp/KHjuYFgIRuHET7N4Wx9/HgZ5mJsLvEG35qHh4fwmUGgg/X1dURTx5jJlGQnJiZopzE+Pp71jSRy/DVA3a6hM6J1EvdIvDN6asjS0pI7Pz93o6OjnAM1NTVueHiY81NTU25nZyc/49zk5KSrqqpybW1trGfXUH1QXFxMgTN0GHeqbru6usITjoyMUC8kvjnGQu/p6aH+Wn18GoDVYcQBSIIIFG1vb6c+NjaWWNgK5gBiYYu0JrQOKNiIdLC/v8/Cg4ODtKenpxMNQPzHw7mBgQHah4eHtPVQtj5EfhAawUFScJyk4NXVVS7Q2tpK++zsLDRxenpKX0tLC+21tTXaWszWU03pgI2kBUo0hxEcHx9zoebmZtoHBwfcLdDU1MS5k5MT2jY3rSYePnFGfpZgBfi3hwtubW3RBpubm/RdXFzQtrl6bSG2CYxqJNys8WtlbYywhU/maOOFLsC0XFtTvlDDK6mH1YqeAhwdHSGTHwNQDMDHhTl8fMDmpu2u/CA0Et96NlHBy8vLXAgHEiDPxgMcZMSsrKzQht/WUqzVARvRRJxgA3d3d7nA0NAQbTQBEdZGDGJ1iON6sQ0KNqIggML+uqZu/b29vRSBPNDR0cEc4M9NqBevoeYTjVhRErBXvNBbYgU+C3zd3d3U09bQOoDV0VU8CQnd+oIzMzPUQWdnZ6IBK5gTyIEPoJZtRvqrjagJ6AD/wlXsy5eviUX9K5gYrdzf3zMHOr5KALuGHQHvET8m7gnYAl+IxNu3b/Ia7oHveXE+KC0tzWvOXV1d5bXv9wdAHr8CeMKFZosCJWj0bwBHkIvTmIvP5XM25Pjrn2NcSzlAOhspFCDyIURzcUzO5MdNO43X5sKOWNCYmhOZzD957dfB91eQ1ni8xg8/sAACkGR/YO3t7bm7u7t8MorkYlXcFoUPUlZW5qqrq3/4gQW0BkZ8JYURTq89yTrNCwsLWOm3ZHFxkbXit0XfgUDBH+EfPrx3nz5du3fv/vWe5FYqXj6bn/Rl3efPt/z5WVdXF3YFc4hLfHnGFYzObMfA/3rPVfoD0tDQwJpaB3eXLjnAHfGB/zPOfQNXxFa47OwDXwAAAABJRU5ErkJggg==';
-      var div_timeinterval_xmlload= 15*60; //How many seconds before reloading the play list
+      var div_timeinterval_xmlsload= 15*60; //How many seconds before reloading the play list
       var div_timeinterval_pageshow=   20; // How many seconds before showing next page
       var div_timeinterval_timeshow=   50; // How many milliseconds before showing next page
 
-      // The core diversity: list of channels
-      var server= 'https://maarten-pennings.github.io/NarrowCast/'
-      var div_list= [server+'weather.channel',server+'art.channel'];
-    
       // Generic libraries ========================================
       
       function array_shuffle(array) { // Return shuffled copy of `array`
@@ -156,133 +152,132 @@
       
       // Load a list of XML channel files into an array ================================
 
-      var xml_stilltoload; 
-      var xml_callback;
-      var xml_pages;
-      var xml_log;
-      function xml_adderror(churl,msg) {
-        var opage= { channel:url_file(churl), img:div_error_png, title:'Error', description:msg+'<br/>'+churl };
-        xml_pages.push(opage)
-        console.warn('Error loading '+churl+' '+msg);
-        xml_log+= 'Error loading '+churl+' '+msg+'\r\n';
+      var xmls_channelsltoload;
+      var xmls_callback;
+      var xmls_pages;
+      var xmls_log;
+      var xmls_channels;
+      function xmls_adderror(url,msg) {
+        var xmsg=msg.replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        var opage= { channel:url_file(url), img:div_error_png, title:'Error', description:xmsg+'<br/>'+url };
+        xmls_pages.push(opage)
+        console.warn('Error loading '+url+' '+msg);
+        xmls_log+= 'Error loading '+url+' '+msg+'\r\n';
       }
-      function xml_addfromfile(churl,sxml) { // Parse string `sxml` (a loaded xml channel file), and add all entries to the global array xml_pages. `churl` is the url of the channel file, used for user messages.
+      function xmls_chnparse(chnurl,sxml) { // Parse string `sxml` (a loaded xml channel file), and add all entries to the global array xml_pages. `chnurl` is the url of the channel file, used for user messages.
         var oparser= new DOMParser();
         var odom= oparser.parseFromString(sxml,'text/xml');
         var orss= odom.querySelector('rss');
-        if( orss==null ) { xml_adderror(churl,'root "rss" missing'); return; }
+        if( orss==null ) { xml_adderror(chnurl,'root "rss" missing'); return; }
         var ochannel= orss.querySelector('channel');
-        if( ochannel==null ) { xml_adderror(churl,'tag "channel" missing'); return; }
+        if( ochannel==null ) { xml_adderror(chnurl,'tag "channel" missing'); return; }
         var ochanneltitle=ochannel.querySelector('title');
-        if( ochanneltitle==null ) { xml_adderror(churl,'tag "channel" has no "title"'); return; }
+        if( ochanneltitle==null ) { xml_adderror(chnurl,'tag "channel" has no "title"'); return; }
         var oitems= odom.querySelectorAll('item');
-        if( oitems==null || oitems.length==0) { xml_adderror(churl,'tag "channel" has no "item"'); return; }
+        if( oitems==null || oitems.length==0) { xml_adderror(chnurl,'tag "channel" has no "item"'); return; }
         for( var i=0; i<oitems.length; i++ ) {
           var oenclosure= oitems[i].querySelector('enclosure');
-          if( oenclosure==null ) { xml_adderror(churl,'"item" '+(i+1)+' has no "enclosure" (for image)'); continue; }
+          if( oenclosure==null ) { xml_adderror(chnurl,'"item" '+(i+1)+' has no "enclosure" (for image)'); continue; }
           var simgurl= oenclosure.getAttribute('url')
-          if( simgurl==null ) { xml_adderror(churl,'"item" '+(i+1)+' has an "enclosure" but no "url" (for image)'); continue; }
-          if( simgurl=="" ) { xml_adderror(churl,'"item" '+(i+1)+' has an "enclosure" with an empty "url" (for image)'); continue; }
-          if( simgurl.indexOf(':')==-1 ) simgurl= url_path(churl)+simgurl; // Image url is not absolute, prepend url of channel
+          if( simgurl==null ) { xml_adderror(chnurl,'"item" '+(i+1)+' has an "enclosure" but no "url" (for image)'); continue; }
+          if( simgurl=="" ) { xml_adderror(chnurl,'"item" '+(i+1)+' has an "enclosure" with an empty "url" (for image)'); continue; }
+          if( simgurl.indexOf(':')==-1 ) simgurl= url_path(chnurl)+simgurl; // Image url is not absolute, prepend url of channel
           var otitle= oitems[i].querySelector('title');
-          if( otitle==null ) { xml_adderror(churl,'"item" '+(i+1)+' has no "title"'); continue; }
+          if( otitle==null ) { xml_adderror(chnurl,'"item" '+(i+1)+' has no "title"'); continue; }
           var odescription= oitems[i].querySelector('description');
-          if( odescription==null ) { xml_adderror(churl,'"item" '+(i+1)+' has no "description"'); continue; }
+          if( odescription==null ) { xml_adderror(chnurl,'"item" '+(i+1)+' has no "description"'); continue; }
           var opage= { channel:ochanneltitle.textContent, img:simgurl, title:otitle.textContent, description:odescription.textContent };
-          xml_pages.push(opage);
+          xmls_pages.push(opage);
         }
-        console.log('Loaded '+oitems.length+' pages from '+churl);
-        xml_log+= 'Loaded '+oitems.length+' pages from '+churl+'\r\n';
+        console.log('Loaded '+oitems.length+' pages from '+chnurl);
+        xmls_log+= 'Loaded '+oitems.length+' pages from '+chnurl+'\r\n';
       }
-      function xml_handler() {
-        // console.log('xml_handler '+this.readyState+' '+this.status+' '+this.url);
+      function xmls_chnhandler() {
+        //console.log('xmls_chnhandler req='+this.readyState+' xml='+this.status+' '+this.url);
         if( this.readyState==4 ) {
           // Request is ready (successfully or with error)
-          if( this.status==200 ) xml_addfromfile(this.url,this.responseText); else xml_adderror(this.url,'Failed loading');
-          if( --xml_stilltoload == 0 ) { // All channels loaded, callback
-            xml_pages= array_shuffle(xml_pages);
-            xml_callback(xml_pages,xml_log);
+          //console.log('xmls_chnhandler xml='+this.status+' '+this.url);
+          if( this.status==200 ) xmls_chnparse(this.url,this.responseText); else xmls_adderror(this.url,'GET failed');
+          if( --xmls_channelsltoload == 0 ) { // All channels loaded, callback
+            xmls_callback(xmls_channels,xmls_pages,xmls_log);
           }
         }
       }
-      function xml_request(churl) { // Request to load the xml channel file from URL `churl`
-        // console.log('xml_request '+churl);
+      function xmls_chnrequest(chnurl) { // Request to load the xml channel file from URL `chnurl`
+        //console.log('xmls_chnrequest '+chnurl);
         var oreq= new XMLHttpRequest();
-        oreq.url= churl; // Field `url` added
-        oreq.onreadystatechange= xml_handler;
-        oreq.open('GET',churl);
+        oreq.url= chnurl; // Field `url` added
+        oreq.onreadystatechange= xmls_chnhandler;
+        oreq.open('GET',chnurl);
         oreq.send();
       }
-      function xml_loader(churls,callback) {
-        // console.log('xml_loader');
-        xml_stilltoload= churls.length; // When 0, callback will be called
-        xml_callback= callback; // Function to call when all urls loaded
-        xml_pages= []; // List of all pages of all xml channel files
-        xml_log= ""; // Log of xml channels load (parsing of all channels)
-        for( var ix in churls ) {
-          xml_request(churls[ix]);
+      function xmls_chsload(achnurl) {
+        //console.log('xmls_chsload');
+        xmls_channelsltoload= achnurl.length; // When 0, callback will be called
+        for( var ix in achnurl ) {
+          xmls_chnrequest(achnurl[ix]);
         }
       }
-      
-      // Play list loader ==========================================
-      
-      var list_callback;
-      var list_channels;
-      var list_log;
-      function list_adderror(lsturl,msg) {
-        console.warn('Error loading '+lsturl+' '+msg);
-        xml_log+= 'Error loading '+lsturl+' '+msg+'\r\n';
-      }
-      function list_parse(lsturl,sxml) {
+      function xmls_lstparse(lsturl,sxml) {
         var oparser= new DOMParser();
         var odom= oparser.parseFromString(sxml,'text/xml');
         var olist= odom.querySelector('list');
-        if( olist==null ) { xml_adderror(churl,'root "list" missing'); return; }
+        if( olist==null ) { xmls_adderror(chnurl,'root "list" missing'); return; }
         var ochannels= odom.querySelectorAll('channel');
-        if( ochannels==null || ochannels.length==0) { list_adderror(lsturl,'tag "list" has no "channel"'); return; }
+        if( ochannels==null || ochannels.length==0) { xmls_adderror(lsturl,'<list> has no <channel>'); return; }
         for( var i=0; i<ochannels.length; i++ ) {
-          var schurl= ochannels[i].textContent;
-          if( schurl=="" ) { xml_adderror(churl,'"channel" '+(i+1)+' has an empty "url"'); continue; }
-          if( schurl.indexOf(':')==-1 ) simgurl= url_path(lsturl)+schurl; // Channel url is not absolute, prepend url of play list
-          var ochannel= { url:schurl };
-          list_channels.push(ochannel);
+          var chnurl= ochannels[i].textContent;
+          if( chnurl=="" ) { xmls_adderror(lsturl,'<channel> '+(i+1)+' is empty (expected channel url)'); continue; }
+          if( chnurl.indexOf(':')==-1 ) chnurl= url_path(lsturl)+chnurl; // Channel url is not absolute, prepend url of play list
+          xmls_channels.push(chnurl);
         }
-        console.log('Loaded '+ochannels.length+' channel urls from list '+lsturl);
-        list_log+= 'Loaded '+ochannels.length+' channel urls from list '+lsturl+'\r\n';
+        console.log('Loaded '+xmls_channels.length+' channel urls from list '+lsturl);
+        xmls_log+= 'Loaded '+xmls_channels.length+' channel urls from list '+lsturl+'\r\n';
       }
-      function list_handler() {
-        // console.log('list_handler '+this.readyState+' '+this.status+' '+this.url);
+      function xmls_lsthandler() {
+        //console.log('xmls_lsthandler req='+this.readyState+' xml='+this.status+' '+this.url);
         if( this.readyState==4 ) {
           // Request is ready (successfully or with error)
-          if( this.status==200 ) list_parse(this.url,this.responseText); else list_adderror(this.url,'Failed loading');
-          list_callback(list_channels,list_log);
+          //console.log('xmls_lsthandler xml='+this.status+' '+this.url);
+          if( this.status==200 ) xmls_lstparse(this.url,this.responseText); 
+            else if( this.url=="" ) xmls_adderror('<none>','After web page url add "?" and then playlist url, e.g. append "?example.list.xml"');
+            else xmls_adderror(this.url,'play list get failed');
+          xmls_chsload(xmls_channels);
         }
       }
-      function list_loader(lsturl,callback) { // Loads the xml playlist file from URL `lsturl`
-        // console.log('list_request '+lsturl);
-        list_callback= callback; // Function to call when loading and parsing of playlist file is completed
-        list_channels= []; // List of all channel urls
-        list_log= ''; // Log of xml playlist load (parsing of playlist)
+      function xmls_lstrequest(lsturl) { // Request to load the xml play list file from URL `lsturl`
+        //console.log('xmls_lstrequest '+lsturl);
         var oreq= new XMLHttpRequest();
         oreq.url= lsturl; // Field `url` added
-        oreq.onreadystatechange= list_handler;
+        oreq.onreadystatechange= xmls_lsthandler;
         oreq.open('GET',lsturl);
-        oreq.send();
+        oreq.send(); 
       }
-
+      function xmls_lstload(lsturl) { // Load the xml play list file
+        xmls_channels= []; // List of all channel urls initialized to empty, loader will add new ones
+        xmls_lstrequest(lsturl); 
+      }
+      function xmls_loader(lsturl,callback) { // Loads the xml files (play list then channels) file from URL `lsturl`
+        //console.log('xmls_loader '+lsturl);
+        xmls_callback= callback; // Function to call when loading and parsing of xml files is completed
+        xmls_log= ''; // Log of xml files load
+        xmls_pages= []; // List of all pages of all xml channel files, also used to add pages with (load) errors
+        xmls_lstload(lsturl);
+      }
+      
       // Main =================================================
       
-      var main_timestart_xmlload; // Records when xml was loaded (in main_xmlload), so that status bar can show time-to-go
+      var main_timestart_xmlsload; // Records when xml was loaded (in main_xmlload), so that status bar can show time-to-go
       var main_timestart_pageshow; // Records when page was shown (in main_showpage), so that status bar can show time-to-go
       var main_pages;
       function main_showtime() {
         var now= new Date;
-        var reload_remain_s= Math.round( (now - main_timestart_xmlload) / 1000 );
+        var reload_remain_s= Math.round( (now - main_timestart_xmlsload) / 1000 );
         var page_remain_ms= now - main_timestart_pageshow;
         // Build strings
         var perc= (100/1000)*page_remain_ms/div_timeinterval_pageshow; if( perc>100 ) perc=100;
         document.getElementById('fld_pageshow').style.width= perc+"%";
-        document.getElementById('fld_xmlload').innerHTML= main_timestart_xmlload==null? '-' : div_timeinterval_xmlload-reload_remain_s;
+        document.getElementById('fld_xmlload').innerHTML= main_timestart_xmlsload==null? '-' : div_timeinterval_xmlsload-reload_remain_s;
         document.getElementById('fld_datetime').innerHTML= now.getHours() + (now.getMinutes()<10?':0':':') + now.getMinutes() + ' ' +
           ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][now.getDay()] + ' ' +
           ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][now.getMonth()] + ' '+
@@ -317,36 +312,40 @@
         if( main_pagetimer!=null ) clearInterval(main_pagetimer); // If there is a page timer running, stop it
         main_showpage(); main_pagetimer=setInterval(main_showpage, div_timeinterval_pageshow*1000); 
       }
-      function main_loadhandler(pages,log) { // Handler is called when xmlload finishes
-        //for( var page of pages ) console.log(page); 
+      function main_loadhandler(channels,pages,log) { // Handler is called when xmlload finishes
+        //console.log('main_loadhandler()'); 
+        //  for( var channel of channels ) console.log('  ch: '+channel); 
+        //  for( var page of pages ) console.log('  pg: '+page.channel+' '+page.img+' '+page.title+' '+page.description); 
+        //  console.log('  lg: '+log);
         console.log('New playlist '+pages.length+' pages');
+        if( document.location.search.split('&').includes('mix') ) { pages= array_shuffle(pages); console.log('Mixing playlist'); log+='Mix';}
         document.getElementById('fld_channel').title= log;
-        main_pages= pages;
+        main_pages= pages; // Latch in the new pages
         main_pages.cursor= -1; // Cursor added (which page to show)
         main_startpage();
       }
-      function main_xmlload() {
-        main_timestart_xmlload= Date.now(); // Timestamp start page list load, so that we can show next load in bar
-        xml_loader(div_list, main_loadhandler); // Handler is called when xmlload finishes
+      function main_xmlsload() {
+        //console.log('main_xmlsload()');
+        main_timestart_xmlsload= Date.now(); // Time stamp when loading of xml files started, so that we can show "next load" in status bar
+        // Determine play list URL
+        var args= document.location.search.split('&');
+        if( args.length>0 ) { 
+          var lsturl= args[0].substring(1); // Assume first arg is playlist URL (strip '?')
+          if( lsturl.indexOf(':')==-1 ) lsturl= url_path(document.URL)+lsturl; // Playlist url is not absolute, prepend url of html
+        } else { /* lsturl is now "", loader will give error */ }
+        // Load xml files
+        xmls_loader(lsturl,main_loadhandler);
       }
-function main_listhandler(channels,log) { 
-  for( var channel of channels ) console.log(channel); 
-  console.log(log);
-}
-function main_listload(lsturl) {
-  if( lsturl.indexOf(':')==-1 ) lsturl= url_path(document.URL)+lsturl; // Playlist url is not absolute, prepend url of html
-  list_loader(lsturl,main_listhandler);
-}
       function main() {
+        //console.log('main()');
         document.getElementById('fmt_pageshow').onclick= main_startpage;
-        document.getElementById('fmt_pageshow').title= "click to move to next page";
+        document.getElementById('fmt_pageshow').title= 'Click to move to next page';
         document.getElementById('fld_datetime').title= div_version;
         document.getElementById('fld_img').src= div_wait_png; // Wait-image during first play list load (during next play list loads, previous page list is played)
         main_showtime(); setInterval(main_showtime, div_timeinterval_timeshow ); // Timer to update the bottom bar (page, date/time)
-        main_xmlload(); setInterval(main_xmlload, div_timeinterval_xmlload*1000 ); // Timer to reload xml page list
-main_listload(server+'example.list');
+        main_xmlsload(); setInterval(main_xmlsload, div_timeinterval_xmlsload*1000 ); // Timer to reload xml page list
       }
-      // Start loading and playing pages, once html is loaded
+      // Call main() once html is loaded
       window.onload= main; 
     </script>
   </head>
@@ -371,7 +370,6 @@ main_listload(server+'example.list');
 
 <!--
 TODO
- - add .list file, which enumerates .channel
  - add bg picture
  
  - nu.nl
@@ -379,4 +377,5 @@ TODO
  - airport departures/arrivals
  
  - cgi with https://wkhtmltopdf.org/
+
 -->
